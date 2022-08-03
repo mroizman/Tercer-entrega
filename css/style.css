@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Bitter', serif;
+}
+
+/*---------------------------------------- BARRA DE NAVEGACION ---------------------------------------*/
+.boina{ 
+    height: 80px;
+    padding-left: 3.2rem;
+    transition: all 0.5s;
+}
+.bar nav ul li{
+    color: white;
+    transition: all 0.7s;
+}   
+.bar nav ul li a{
+    color: white;
+    border: #1a1a1a;
+    transition: all 0.5s;
+} 
+ul{
+    list-style: none;
+    padding: 1rem 2rem;
+    display: flex; 
+}
+header li{
+    padding: 0 0.6rem;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    background: rgb(26,26,26);
+    background: radial-gradient(circle, rgba(26,26,26,1) 0%, rgba(0,0,0,1) 100%);
+    height: 4.8rem;
+}
+header{
+    position:sticky;
+    z-index:1 ;
+    top:0;
+}
+
+/*------------------------------------------ INTRO -------------------------------------------------*/
+.titulo1{
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    color:white ;
+}
+.titulo2{
+    font-weight: 300;
+    font-size: 50px;
+    text-align: center;
+    color:white ;
+}
+.titulo3{
+    font-weight: 900;
+    font-size: 140px;
+    text-align: center;
+    color:white ;
+}  
+.titulo4{
+    font-family: 'Roboto Slab', serif;
+    border-radius: 50px;
+    height: 50px;
+    width: 350px;
+    background: red;
+    font-weight: 300;
+    font-size: 23px;
+    text-align: center;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}  
+#parallax{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(../imagenes/peaky_blinders_derivados.jpeg_293974595.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120vh;
+    width: 100%;
+}
+#parallax3{
+    background-image: url(../imagenes/arthur_shelby_-_peaky_blinders.jpg_522314038.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150vh;
+    width: 100%;
+}   
+.flecha{
+    box-sizing: content-box;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-end ;
+}
+/*------------------------------------- CUERPO PAGINA ----------------------------------------------*/
+.main{
+    padding-top: 10rem;
+}
+.row{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.boxintro{
+    background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(98,96,96,1) 50%, rgba(0,0,0,1) 100%);
+    height: 400vh;
+}
+.subtitulo{
+    color: white;
+    width: 100%;
+    height: 20rem;
+    padding-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 3rem;
+}
+.trama1{
+    color: white;
+    width: 80%;
+    padding-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}  
+#donde-ver{
+    margin-top: 10rem;
+    font-size: 9rem;
+}
+.pieDePag{
+    background: rgb(96,95,95);
+    background: linear-gradient(0deg, rgba(96,95,95,1) 0%, rgba(62,60,60,1) 72%, rgba(0,0,0,1) 100%);
+    height: 25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.letrapie{
+    color: white;
+    font-size: 1.5rem;
+}
+.bodyreparto{
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(../imagenes/photo-1602795923196-ead53788ce2f.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.personajes{
+    color: white;
+    margin-top: 21rem;
+    display: flex;
+    flex-direction: column;
+}
+.seasons{
+color: red;
+max-width: 100%;
+height: 65%;
+background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.grid-container{
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(../imagenes/by-order-of-peaky-blinders-fondo-negro.jpg);
+  display: grid;
+  height: 150vh;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 100px;
+  row-gap: 100px;
+  justify-content: center;
+  align-content: center;
+}
+.boxtitulo{
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.boxnetflix{
+    margin-top: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.netflix{
+    height: 5rem;
+    width: 5rem;
+}
+.imgpersonajes{
+    filter: blur(10px);
+    max-width: 100%;
+}
+/*------------------------------------------ HOVERS ----------------------------------------------------*/
+.bar nav ul li:hover{
+    transform: scale(1.2);
+}
+.bar nav ul li a:hover{
+    color: red;
+}
+.boina:hover{
+    transform: scale(1.2);
+    rotate: 20deg;
+}
+.imgpersonajes:hover{
+    filter: blur(0);
+}
+.titulo4:hover{
+    transform:scale(1.1);
+    background: rgb(149,0,0);
+    background: linear-gradient(90deg, rgba(149,0,0,1) 0%, rgba(255,0,0,1) 100%);
+}
+/*------------------------------------- MEDIA SCREENS ----------------------------------------------*/
+
+
+@media screen and (max-width:1300px){
+    .titulo3{font-size: 120px;}
+    .main{padding-top:5rem;}
+    .flecha{height:15rem;
+    justify-content: center;}
+
+
+
+}
+@media screen and (max-width:768px){
+    header li{font-size: 15px;}
+    .boina{padding: 0;
+    height: 70px;}
+    .titulo1{font-size: 40px;}
+    .titulo2{font-size: 20px;}
+    .titulo3{font-size: 100px;}
+    .titulo4{font-size: 85px;}
+    #parallax{height: 80vh; background-attachment: scroll;}
+    #parallax2{height: 80vh; background-attachment: scroll;}
+    #parallax3{height: 80vh; background-attachment: scroll;}
+    .trama1{ flex-wrap: wrap;
+    padding-left: 100px;}
+    .subtitulo{ height: 13rem;
+    flex-direction: row; justify-content: center;}
+    #donde-ver{font-size: 5rem;}
+}
