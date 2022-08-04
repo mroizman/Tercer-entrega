@@ -78,6 +78,44 @@ header{
     align-items: center;
     transition: all 1s;
 }  
+button {
+    font-size: 2em;
+    background: red;
+    color: black;
+    border: 0.25rem solid red;
+    padding: 0.85em 0.75em;
+    margin: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  button:hover {
+    color: red;
+}
+button::after {
+    content: "";
+    background: black;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+  }
+  button[class^="slide"]::after {
+    transition: all 0.35s;
+  }
+  button[class^="slide"]:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
+  }
+  button.slide_from_left::after {
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+  }
 #parallax{
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(../imagenes/peaky_blinders_derivados.jpeg_293974595.webp);
     background-attachment: fixed;
@@ -87,7 +125,7 @@ header{
     width: 100%;
 }
 #parallax3{
-    background-image: url(../imagenes/arthur_shelby_-_peaky_blinders.jpg_522314038.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../imagenes/arthur_shelby_-_peaky_blinders.jpg_522314038.webp);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -219,6 +257,9 @@ align-items: center;
     filter: blur(10px);
     max-width: 100%;
 }
+#background-video{
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+}
 /*------------------------------------------ HOVERS ----------------------------------------------------*/
 .bar nav ul li:hover{
     transform: scale(1.2);
@@ -257,7 +298,6 @@ align-items: center;
     .titulo1{font-size: 40px;}
     .titulo2{font-size: 20px;}
     .titulo3{font-size: 100px;}
-    .titulo4{font-size: 85px;}
     #parallax{height: 80vh; background-attachment: scroll;}
     #parallax2{height: 80vh; background-attachment: scroll;}
     #parallax3{height: 80vh; background-attachment: scroll;}
