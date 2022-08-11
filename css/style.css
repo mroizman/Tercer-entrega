@@ -4,7 +4,6 @@
 }
 body{
     font-family: 'Bitter', serif;
-    max-width: 2000px;
 }
 
 /*---------------------------------------- BARRA DE NAVEGACION ---------------------------------------*/
@@ -128,13 +127,16 @@ button::after {
     box-sizing: content-box;
     height: 25rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content:flex-end ;
+
+    
 }
 /*------------------------------------- CUERPO PAGINA ----------------------------------------------*/
 .main{
     padding-top: 25rem;
+}
+.main1{
+    padding-top: 6rem;
 }
 .row{
     color: white;
@@ -149,19 +151,24 @@ button::after {
     align-items: center;
 }
 .boxintro{
-    background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(98,96,96,1) 50%, rgba(0,0,0,1) 100%);
-    height: 400vh;
+    background: #141414;
+    height: 65vh;
 }
-.subtitulo{
+#subtitulo{
     color: white;
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+.box-trama  {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),url(../imagenes/arthur_shelby_-_peaky_blinders.jpg_522314038.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     width: 100%;
-    height: 20rem;
-    padding-top: 7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    font-size: 3rem;
+}
+#background-video {
+    max-width: 100%;
 }
 .trama1{
     color: white;
@@ -173,11 +180,33 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(98,96,96,1) 50%, rgba(0
     justify-content: space-between;
     align-items: center;
     font-size: 1.5rem;
+    position: absolute;
 }  
-#donde-ver{
-    margin-top: 10rem;
-    font-size: 9rem;
+.trama-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
 }
+#donde-ver{
+    font-size: 9rem;
+    color: white;
+    text-align: center;
+    padding-top: 4rem;
+}
+.dondever-iconos {
+    display: flex;
+  }
+  @media (max-width: 992px) {
+    .dondever-iconos {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    @media (max-width: 992px) {
+      #donde-ver {
+        font-size: 6rem;
+      }
+    }
+  }
 .pieDePag{
     background: rgb(96,95,95);
     background: linear-gradient(0deg, rgba(96,95,95,1) 0%, rgba(62,60,60,1) 72%, rgba(0,0,0,1) 100%);
@@ -203,25 +232,25 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(98,96,96,1) 50%, rgba(0
     flex-direction: column;
 }
 .seasons{
-color: red;
+color: black;
 max-width: 100%;
 height: 65%;
-background: rgb(255,255,255);
-background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+background: white;
 display: flex;
 justify-content: center;
 align-items: center;
+transition: all 0.2s;
 }
 
 .grid-container{
-  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(../imagenes/by-order-of-peaky-blinders-fondo-negro.jpg);
+  background: black;
   display: grid;
   height: 150vh;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: 100px;
-  row-gap: 100px;
+  column-gap: 30px;
+  row-gap: 30px;
   justify-content: center;
   align-content: center;
 }
@@ -236,26 +265,47 @@ align-items: center;
 
 
 }
-.boxnetflix{
-    margin-top: 40vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
 .netflix{
-    height: 5rem;
-    width: 5rem;
+    height: 11rem;
+    width: 11rem;
+    transition: all 0.2s;
 }
+.netflix:hover { background-color: #3b3c3d;
+    border-radius: 10px;
+    transition: all 0.5s;
+
+}
+
 .imgpersonajes{
-    filter: blur(3px);
     width: 100%;
     transition: 0.6s;
 }
-#background-video{
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
-    max-width: 100%;
-
+.carrusel2 {
+    padding-top: 20rem;
 }
+div h1 {color: white;}
+.div1 {
+    position: relative;
+  }
+  
+  .div1 .div2 {
+    position: absolute;  
+    top: 0;  
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  .div1:hover .div2 {
+    opacity: 1;
+  }
+  footer p {
+    font-size: 2.5rem;
+    color: white;
+  }
+  div h1 {
+    transition: all 1s;
+  }
 /*------------------------------------------ HOVERS ----------------------------------------------------*/
 .bar nav ul li:hover{
     transform: scale(1.2);  
@@ -270,26 +320,44 @@ align-items: center;
     rotate: 20deg;
 }
 .imgpersonajes:hover{
-    filter: blur(0);
+    filter: blur(3px);
     transition: all 0.6s;
+    
 }
 .titulo4:hover{
     transform:scale(1.1);
     background: rgb(149,0,0);
     background: linear-gradient(90deg, rgba(149,0,0,1) 0%, rgba(255,0,0,1) 100%);
 }
+.seasons:hover{ 
+    background-color: #3b3c3d;
+    transition: all 0.2s;
+    transform: rotate(2rem);
+}
 /*------------------------------------- MEDIA SCREENS ----------------------------------------------*/
 
 
 @media screen and (max-width:1300px){
-    .titulo3{font-size: 120px;}
+    .titulo1 {font-size: 30px;}
+    .titulo2 {font-size: 30px}
+    .titulo3{font-size: 110px;}
     .main{padding-top:5rem;}
-    .flecha{height:15rem;
-    justify-content: center;}
+    .flecha{height:10rem;}
+    #subtitulo {font-size: 3.5rem;}
+    .trama-text {font-size: 1.5rem;}
+    .boxintro {height: 40rem;}
+
 
 
 
 }
+@media screen and (max-width: 993px) {
+    .boxintro {height: 55rem;}
+    .grid-container{display: grid;grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr; }
+}
+    
+
 @media screen and (max-width:768px){
     header li{font-size: 15px;}
     .boina{padding: 0;
@@ -302,7 +370,11 @@ align-items: center;
     #parallax3{height: 80vh; background-attachment: scroll;}
     .trama1{ flex-wrap: wrap;
     padding-left: 100px;}
-    .subtitulo{ height: 13rem;
+    #subtitulo{ height: 13rem; display: flex;
     flex-direction: row; justify-content: center;}
     #donde-ver{font-size: 5rem;}
+    .boxintro {height: 55rem;}
+    .pieDePag {display: flex; flex-direction: column;}
+    .grid-container{display: grid;grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; }
 }
