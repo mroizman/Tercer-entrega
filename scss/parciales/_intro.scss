@@ -1,0 +1,98 @@
+.titulo1{
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    color:white ;
+}
+.titulo2{
+    font-weight: 300;
+    font-size: 50px;
+    text-align: center;
+    color:white ;
+}
+.titulo3{
+    font-weight: 900;
+    font-size: 140px;
+    text-align: center;
+    color:white ;
+}  
+.titulo4{
+    font-family: 'Roboto Slab', serif;
+    border-radius: 50px;
+    height: 50px;
+    width: 350px;
+    background: red;
+    font-weight: 300;
+    font-size: 23px;
+    text-align: center;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}  
+button {
+    font-size: 2em;
+    background: red;
+    color: black;
+    border: 0.25rem solid red;
+    padding: 0.85em 0.75em;
+    margin: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+button:hover {
+    color: red;
+}
+button::after {
+    content: "";
+    background: black;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+  }
+  button[class^="slide"]::after {
+    transition: all 0.35s;
+  }
+  button[class^="slide"]:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
+  }
+  button.slide_from_left::after {
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+  }
+#parallax{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(../imagenes/peaky_blinders_derivados.jpeg_293974595.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120vh;
+    width: 100%;
+}
+#parallax3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../imagenes/arthur_shelby_-_peaky_blinders.jpg_522314038.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150vh;
+    width: 100%;
+}   
+.flecha{
+    box-sizing: content-box;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+}
+.boina{ 
+    height: 80px;
+    padding-left: 3.2rem;
+    transition: all 0.5s;
+ }
