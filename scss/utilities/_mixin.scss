@@ -1,0 +1,9 @@
+@mixin parallax ($parallaxf, $nr, $cr) {
+    background-attachment: $parallaxf;
+    background-repeat: $nr;
+    background-size: $cr;
+}
+
+$parallaxf: fixed;
+$nr: no-repeat;
+$cr: cover;

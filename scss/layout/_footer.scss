@@ -1,0 +1,6 @@
+@import "../utilities/maps";
+.pieDePag {
+    background: map-get($footer , bg );
+    color: map-get($footer , letra );
+
+}

@@ -1,4 +1,9 @@
-@import "./parciales/intro";
+@import "./parcials/intro";
+@import "./layout/footer";
+@import "./utilities/extend";
+@import "./utilities/maps";
+@import "./utilities/mixin";
+@import "./utilities/variables";
 
 body {
     font-family: 'Bitter', serif;
@@ -24,4 +29,14 @@ nav{
     background: rgb(26,26,26);
     background: radial-gradient(circle, rgba(26,26,26,1) 0%, rgba(0,0,0,1) 100%);
     height: 4.8rem;
+}
+.row {
+    color: $col-blanco;
+    @extend %disposicionX;
+}
+.column {
+    @extend %disposicionY;
+}
+#parallax {
+    @include parallax ($parallaxf, $nr, $cr);
 }
