@@ -1,0 +1,70 @@
+.seasons{
+    color: black;
+    max-width: 100%;
+    height: 65%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    }
+    .seasons:hover{ 
+        background-color: #3b3c3d;
+        transition: all 0.2s;
+        transform: rotate(2rem);
+    }
+    
+    .grid-container{
+      background: black;
+      display: grid;
+      height: 150vh;
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      column-gap: 30px;
+      row-gap: 30px;
+      justify-content: center;
+      align-content: center;
+      @media screen and (max-width: 993px) {display: grid;grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;}
+      @media screen and (max-width: 768px) {display: grid;grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; }
+    }
+    button {
+        font-size: 2em;
+        background: red;
+        color: black;
+        border: 0.25rem solid red;
+        padding: 0.85em 0.75em;
+        margin: 1rem;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+      }
+      button:hover {
+        color: red;
+    }
+    button::after {
+        content: "";
+        background: black;
+        position: absolute;
+        z-index: -1;
+        padding: 0.85em 0.75em;
+        display: block;
+      }
+      button[class^="slide"]::after {
+        transition: all 0.35s;
+      }
+      button[class^="slide"]:hover::after {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: all 0.35s;
+      }
+      button.slide_from_left::after {
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        right: 100%;
+      }

@@ -2,5 +2,28 @@
 .pieDePag {
     background: map-get($footer , bg );
     color: map-get($footer , letra );
-
+    height: 25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media screen and (max-width:768px) {display: flex; flex-direction: column;}
 }
+.letrapie{
+    color: white;
+    font-size: 1.5rem;
+}
+.div1 {
+    position: relative;
+  }
+  
+  .div1 .div2 {
+    position: absolute;  
+    top: 0;  
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  .div1:hover .div2 {
+    opacity: 1;
+  }

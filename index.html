@@ -13,6 +13,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400&family=Roboto+Slab:wght@100;200;300;600&display=swap" rel="stylesheet"> 
 </head>
@@ -41,9 +42,9 @@
     <div id="parallax">
         <div class="main1">  
             <div class="column">
-                <p class="titulo1">BY ORDER</p>
-                <p class="titulo2">OF THE</p>
-                <p class="titulo3">PEAKY BLINDERS</p>
+                <p data-aos="fade-right" data-aos-duration="1000" class="titulo1">BY ORDER</p>
+                <p data-aos="fade-left" data-aos-duration="1000" class="titulo2">OF THE</p>
+                <p data-aos="zoom-in" data-aos-duration="3000" class="titulo3">PEAKY BLINDERS</p>
             </div>
         </div>
         <div class="flecha d-flex text-center justify-content-center align-middle">
@@ -54,11 +55,11 @@
       <div class="row m-auto">
         <div class="col-md-2">
           <div id="subtitulo">
-          <p>T</p>
-          <p>R</p>
-          <p>A</p>
-          <p>M</p>
-          <p>A</p>
+          <p data-aos="fade-right">T</p>
+          <p data-aos="fade-right">R</p>
+          <p data-aos="fade-right">A</p>
+          <p data-aos="fade-right">M</p>
+          <p data-aos="fade-right">A</p>
         </div>
         </div>
         <div class="col-md-10">
@@ -71,12 +72,12 @@
     
     <div class="boxintro container-fluid">
       <div class="row m-auto p-5">
-        <h2 id="donde-ver">DONDE VER</h2>
+        <h2 data-aos="zoom-in" id="donde-ver">DONDE VER</h2>
         <div class="dondever-iconos justify-content-around">
-          <div class="py-5">
+          <div data-aos="fade-right" class="py-5">
             <a href="https://www.bbc.co.uk/iplayer/episodes/b045fz8r/peaky-blinders"><img src="./imagenes/icons8-bbc-100.png" alt="" class="netflix" /></a>
           </div>
-          <div class="py-5">
+          <div data-aos="fade-left" class="py-5">
             <a href="https://www.netflix.com/ar/title/80002479"><img src="./imagenes/netflix.png" alt="" class="netflix" /></a>
           </div>
         </div>
@@ -85,7 +86,8 @@
     
     
     
-    <footer class="pieDePag" id="pie">
+    <footer id="pie">
+      <div class="pieDePag">
         <p>Nuestras redes</p>
       <a href="https://www.twitter.com"><div class="div1">
         <div class="images">
@@ -111,6 +113,30 @@
           <img src="./imagenes/facebook-.png">
         </div>
       </div></a>
+      </div>
+      <div class="container"> 
+        <h2>Danos tu idea! Que serie te gustaria que hagamos?</h2>
+        <form class="mt-3">
+          <div class="row mb-3">
+            <label  class= "col-3 form-label" for="nameInput">Nombre</label>
+            <div class="col-9"><input type="name" class="form-control" id="nameInput" placeholder="Escribe tu Nombre"></div>
+          </div>
+          <div class="row mb-3">
+            <label  class= "col-3 form-label" for="emailInput">Email</label>
+            <div class="col-9"><input type="mail" class="form-control" id="emailInput" placeholder="Dirección de Email"></div>
+          </div>
+          <div class="row mb-3">
+            <label  class= "col-3 form-label" for="serieInput">Serie</label>
+            <div class="col-9"><input type="serie" class="form-control" id="serieInput" placeholder="Escribe la serie"></div>
+          </div>
+         
+            <button class="btn btn-primary col-1">
+              Enviar
+            </button>
+          </div>
+        </form>
+
+      </div>
 </footer>
     <!-- Bootstrap -->
     <script
@@ -118,5 +144,13 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    easing: 'ease-out-back',
+    duration: 1000
+  });
+</script>
 </body>
 </html>
